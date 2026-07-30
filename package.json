@@ -1,0 +1,19 @@
+{
+  "name": "kitchen-wizard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An ingredient-first recipe finder with a secure Express API proxy.",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/app.js",
+    "dev": "node --watch --env-file-if-exists=.env server/app.js",
+    "check": "node --check public/app.js && node --check server/app.js && node --check server/routes/recipes.js && node --check server/services/spoonacular.js && node --check server/validation/ingredients.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
